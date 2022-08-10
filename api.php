@@ -28,12 +28,26 @@ if(isset($_REQUEST['cat']))
 {//check to be sure data has been transmitted via GET or POST
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
-		case "box":
-			include('data/bond-box-office.js'); //"box" orders by box office results
+		case "alpha":
+			include('data/books-alpha.js'); //"box" orders by box office results
 			break;
 		default:
-			include('data/bond-year.js'); //default orders by year
+			include('data/books-rating.js'); //default orders by year
 	}
 }else{//if not data sent, inform calling application
 	echo "Incorrect parameter sent";
 }
+
+// if(isset($_REQUEST['cat']))
+// {//check to be sure data has been transmitted via GET or POST
+// 	switch($_REQUEST['cat'])
+// 	{//determine contents of 'cat'
+// 		case "year":
+// 			include('data/bond-yearjs'); //"box" orders by box office results
+// 			break;
+// 		default:
+// 			include('data/bond-box-office.js'); //default orders by year
+// 	}
+// }else{//if not data sent, inform calling application
+// 	echo "Incorrect parameter sent";
+// }
